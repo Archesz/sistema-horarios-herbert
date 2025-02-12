@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(52, 20, 18) 40%, rgba(37, 37, 37, 1) 100%);
+    align-items: center;
+    padding: 30px;
+
+    .link {
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.red{
+    color: red;
+}

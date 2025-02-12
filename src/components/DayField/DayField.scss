@@ -1,0 +1,27 @@
+.day-field{
+    color: black;
+    display: flex;
+    margin-bottom: 20px;
+
+    .field-name{
+        font-size: 14px;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 6px;
+    }
+
+    .row-hours{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 376px) {
+    .row-hours{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+}

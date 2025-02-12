@@ -133,9 +133,9 @@ function App() {
             <select name="disciplina" onChange={handleChange}>
               <option value="">Selecione a Disciplina</option>
               <option value="matematica">Matemática</option>
-              <option value="portugues">Física</option>
-              <option value="ciencias">Química</option>
-              <option value="historia">Biologia</option>
+              <option value="fisica">Física</option>
+              <option value="quimica">Química</option>
+              <option value="biologia">Biologia</option>
               <option value="geografia">Geografia</option>
               <option value="historia">História</option>
               <option value="sociologia">Sociologia</option>

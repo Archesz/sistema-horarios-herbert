@@ -68,7 +68,7 @@ function App() {
       const listaHorarios = dia === "Sábado" ? horariosSabado : horarios;
   
       listaHorarios.forEach((horario) => {
-        disponibilidadeCompleta[dia][horario] = 
+        disponibilidadeCompleta[dia][horario] =
           formData.disponibilidade[dia][horario] || false;
       });
     });
@@ -76,7 +76,8 @@ function App() {
     const jsonOutput = {
       nome: formData.nome,
       disciplina: formData.disciplina,
-      disponibilidade: disponibilidadeCompleta
+      disponibilidade: disponibilidadeCompleta,
+      data_hora: new Date().toISOString(), // Registra a data e horário no formato ISO
     };
   
     try {
@@ -86,19 +87,20 @@ function App() {
       setTimeout(() => setIsSubmitted(false), 2000);
   
       // Adicionando evento no Analytics
-      logEvent(analytics, 'envio_formulario_agendamento', {
+      logEvent(analytics, "envio_formulario_agendamento", {
         nome: formData.nome,
         disciplina: formData.disciplina,
+        data_hora: jsonOutput.data_hora, // Inclui a data/hora no evento do Analytics
       });
-      
-      alert("Horário Enviado com sucesso!")
-      window.location.reload();  // Recarrega a página
+  
+      alert("Horário Enviado com sucesso!");
+      window.location.reload(); // Recarrega a página
   
     } catch (error) {
       console.error("Erro ao salvar horário: ", error);
     }
   };
-    
+      
   return (
     <div className="App">
       <span className="agenda-title">Sistema de Agendamento</span>

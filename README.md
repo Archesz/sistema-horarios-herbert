@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Sistema de Agendamento - Herbert de Souza
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um sistema de agendamento desenvolvido para facilitar o processo de marcação de horários para aulas no Cursinho Herbert de Souza. Ele permite que os professores insiram suas informações e disponibilidades de horários para que os alunos possam se agendar de acordo com a disponibilidade do professor.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Cadastro de Agendamentos: Professores podem inserir seus horários disponíveis para aulas.
+- Disponibilidade de Horários: O sistema permite que o professor escolha quais horários ele está disponível para lecionar.
+- Formulário Interativo: O sistema usa checkboxes para marcar a disponibilidade de horários e um formulário interativo para o preenchimento das informações.
+- Integração com Firebase: Os dados são armazenados em tempo real no Firebase Firestore, garantindo que todas as informações estejam sempre atualizadas e acessíveis.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js: Framework JavaScript para criação da interface do usuário.
+- Firebase: Plataforma de desenvolvimento para autenticação, banco de dados em tempo real e análises.
+- Framer Motion: Biblioteca para animações fluidas e interações.
+- SCSS: Pré-processador CSS para uma estilização mais flexível e escalável.
+- Firebase Analytics: Para monitorar eventos de interação e melhorar a experiência do usuário.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como Rodar o Projeto
 
-### `npm test`
+#### Pré-Requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js;
+- NPM;
+- conta no Firebase;
 
-### `npm run build`
+#### Passos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório
+    ```
+    git clone https://github.com/seu-usuario/cursinho-herbert.git
+    cd cursinho-herbert
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Instale as dependências: Se estiver usando NPM:
+    ```
+    npm install
+    ```
+    ou
+    ```
+    yarn install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Configuração do Firebase:
+    - Crie um novo projeto no Firebase Console.
+    - Crie uma nova aplicação e copie as credenciais de configuração do Firebase (API Key, AuthDomain, etc.).
+    - Substitua as credenciais no arquivo src/firebaseConfig.js pelo seu projeto Firebase.
 
-### `npm run eject`
+4. Rodando o projeto localmente: Após a configuração, inicie o servidor de desenvolvimento:
+    ```
+    npm start
+    ```
+    ou
+    ```
+    yarn start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Funcionalidade do Sistema
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Página de Agendamento:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - O usuário (professor) preenche seu nome, a disciplina e a disponibilidade nos dias da semana.
+    - Para cada dia, ele pode marcar ou desmarcar os horários em que está disponível para aulas.
+    - As informações são enviadas para o Firebase Firestore e o sistema exibe um feedback visual quando o agendamento é realizado com sucesso.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Análises no Firebase:
 
-## Learn More
+    - O sistema registra interações como cliques e ações para monitorar o uso da plataforma, facilitando futuras melhorias.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Responsividade:
+    - O design foi projetado para ser responsivo e adaptável a diferentes tamanhos de tela, incluindo dispositivos móveis.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contribuindo
 
-### Code Splitting
+Contribuições são bem-vindas! Se você deseja contribuir para o desenvolvimento do sistema, siga os passos abaixo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork o repositório.
+2. Crie uma nova branch para suas modificações.
+3. Faça as alterações e adicione testes, se necessário.
+4. Faça um pull request explicando suas alterações e os motivos delas.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.

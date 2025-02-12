@@ -77,7 +77,15 @@ function App() {
       nome: formData.nome,
       disciplina: formData.disciplina,
       disponibilidade: disponibilidadeCompleta,
-      data_hora: new Date().toISOString(), // Registra a data e horário no formato ISO
+      data_hora: new Intl.DateTimeFormat('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false, // Para usar o formato de 24 horas
+      }).format(new Date()),
     };
   
     try {

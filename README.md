@@ -96,6 +96,23 @@ Contribuições são bem-vindas! Se você deseja contribuir para o desenvolvimen
 3. Faça as alterações e adicione testes, se necessário.
 4. Faça um pull request explicando suas alterações e os motivos delas.
 
+## Próximos Passos
+
+Este projeto tem grande potencial de expansão! Aqui estão algumas ideias para melhorias e novas funcionalidades que podem ser implementadas no futuro:
+
+### 1. **Notificações por Email**
+   - Integrar com o Firebase Cloud Messaging ou uma API de terceiros para enviar notificações por e-mail ou SMS aos professores quando um novo agendamento for feito.
+
+### 2. **Interface de Visualização de Agendamentos**
+   - Criar uma página de visualização de agendamentos para que os alunos possam ver os horários finais.
+
+### 3. **Melhoria na UI/UX**
+   - Tornar a interface mais interativa com o uso de componentes adicionais como modais, barras de progresso e feedback visual em tempo real.
+   - Tornar o design ainda mais responsivo, melhorando a experiência em dispositivos móveis e tablets.
+
+### 4. **Análise e Relatórios**
+   - Criar uma página de relatórios que mostre estatísticas sobre os agendamentos, como o número de agendamentos realizados por professor ou o número total de aulas realizadas por disciplina.
+
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.

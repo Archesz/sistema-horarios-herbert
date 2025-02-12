@@ -1,6 +1,6 @@
-# Sistema de Agendamento - Organizar horários de professores
+# Sistema de Horários - Organizar horários de professores
 
-Este é um sistema de agendamento desenvolvido para facilitar o processo de marcação de horários para aulas no Cursinho Herbert de Souza. Ele permite que os professores insiram suas informações e disponibilidades de horários para que os alunos possam se agendar de acordo com a disponibilidade do professor.
+Este é um sistema de organização desenvolvido para facilitar o processo de planejamento e montagem de horários para aulas no Cursinho Herbert de Souza. Ele permite que os professores insiram suas informações e disponibilidades de horários para que os coordenadores e grupo responsável possam montar o horário das aulas.
 
 ## Funcionalidades
 

@@ -1,0 +1,28 @@
+.horarios-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .horario{
+        text-align: center;
+    }
+    
+    .professor{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .table-container{
+        width: 80%;
+    }
+    
+    .ant-table-cell {
+        padding: 12px 8px !important;  // Ajuste os valores para alterar a altura das linhas
+    }
+    .ant-table-tbody > tr > td {
+        height: 20px;  // Define a altura das células (ajuste conforme necessário)
+    }
+
+}

@@ -1,0 +1,22 @@
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-iframe {
+    border: solid 1px #777;
+    width: 80%;
+    height: 680px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: black;
+    
+    &:hover {
+        transform: scale(1.02);
+    }
+}

@@ -1,0 +1,122 @@
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px; // Largura padrão para tela grande
+    background-color: #1c1c1e;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: width 0.3s; // Transição suave para a largura
+    position: fixed;
+    &.closed {
+        width: 50px; // Largura reduzida quando a sidebar está retraída
+    }
+
+    .logo {
+        width: 65px;
+        transition: opacity 0.3s;
+    }
+
+    .sidebar-toggle {
+        display: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .sidebar-menu {
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            position: relative;
+
+            .menu-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                color: #fff;
+                text-decoration: none;
+                transition: background 0.3s;
+                position: relative;
+
+                &:hover {
+                    background: #333;
+                    border-radius: 8px;
+                }
+
+                &::after {
+                    content: attr(data-label);
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: #333;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s;
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                }
+
+                svg {
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+
+    // Responsividade
+    @media (max-width: 768px) {
+        .sidebar-container {
+            width: 50px; // Reduzir a largura da sidebar para dispositivos móveis
+        }
+
+        .sidebar-toggle {
+            display: block; // Exibe o ícone de menu
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            color: #fff;
+        }
+
+        .sidebar-menu {
+            display: none; // Esconde o menu em telas pequenas
+        }
+
+        &.open .sidebar-menu {
+            display: flex; // Exibe o menu quando a sidebar está aberta
+            flex-direction: column;
+        }
+
+        .logo {
+            opacity: 0; // Esconde o logo quando a sidebar está retraída
+        }
+    }
+}

@@ -1,28 +1,60 @@
-.horarios-container{
+.horarios-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Alterando para coluna para melhor exibição em dispositivos móveis */
     align-items: center;
+    justify-content: flex-start;
     width: 100%;
+    padding: 0 20px; /* Reduzir o padding em dispositivos móveis */
+    
+    @media (max-width: 768px) { /* Para dispositivos móveis */
+        padding: 0 10px; /* Menos padding em telas pequenas */
+    }
 
-    .horario{
-        text-align: center;
+    .table-container {
+        width: 100%; /* Garantir que a tabela ocupe toda a largura disponível */
+        overflow-x: auto; /* Permite rolar a tabela horizontalmente em telas pequenas */
+        display: flex;
+        flex-direction: column;
+
+        .table-filter {
+            font-weight: bold;
+            color: white;
+            font-size: 18px; /* Reduzir o tamanho da fonte em telas menores */
+            margin-bottom: 12px;
+        }
     }
-    
-    .professor{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .table-container{
-        width: 80%;
-    }
-    
+}
+
+.ant-table-cell {
+    padding: 12px 8px !important;  // Ajuste os valores para alterar a altura das linhas
+}
+
+.ant-table-tbody > tr > td {
+    height: 20px;  // Define a altura das células (ajuste conforme necessário)
+}
+
+@media (max-width: 768px) {
     .ant-table-cell {
-        padding: 12px 8px !important;  // Ajuste os valores para alterar a altura das linhas
-    }
-    .ant-table-tbody > tr > td {
-        height: 20px;  // Define a altura das células (ajuste conforme necessário)
+        font-size: 12px; /* Reduzir o tamanho da fonte nas células */
+        padding: 8px 4px; /* Menos padding nas células para caber mais conteúdo */
     }
 
+    .ant-table-tbody > tr > td {
+        height: auto;  // Permitir que as células ajustem sua altura conforme o conteúdo
+    }
+    
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* A tabela vai ter rolagem horizontal em dispositivos móveis */
+    }
+
+    .table-filter {
+        font-size: 16px; /* Font menor para dispositivos móveis */
+    }
+
+    /* Para o Select do filtro */
+    .ant-select {
+        width: 100%; /* O Select ocupa toda a largura disponível em telas pequenas */
+        font-size: 14px; /* Ajuste o tamanho da fonte */
+    }
 }

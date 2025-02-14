@@ -111,10 +111,6 @@ function Formulario() {
       
   return (
     <div className="App">
-      <span className="agenda-title">Sistema de Agendamento</span>
-      <span className='agenda-title red'>Herbert de Souza</span>
-      <span className="agenda-descript">Olá! Esse sistema foi desenvolvido por <a href="https://portfolio-jovi-a8jn76wqx-archesz.vercel.app" target="_blank" className='link'>@Archs (Jovi)</a>. Estamos em fase de teste. Quaisquer erro, me chamem!</span>
-
       <form className="agenda-field" onSubmit={handleSubmit}>
 
         <div className="agenda-header">

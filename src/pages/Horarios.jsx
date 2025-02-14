@@ -1,6 +1,8 @@
-import React from 'react'
-import { Table, Tag } from "antd";
-import "../styles/horarios.scss"
+import React, { useState } from 'react';
+import { Table, Tag, Select } from "antd";
+import "../styles/horarios.scss";
+
+const { Option } = Select;
 
 function Horarios() {
 
@@ -17,7 +19,7 @@ function Horarios() {
         "Sociologia": "yellow",
         "Filosofia": "pink",
         "Inglês": "gray"
-    }
+    };
 
     const columns = [
         {
@@ -70,108 +72,157 @@ function Horarios() {
             ),
             align: "center"
         },
-    ]
+    ];
 
-    const dataSource = [
-
-        {horario: "08:00", 
-            segunda: { nome: "Renan Augusto", disciplina: "Matemática" }, 
-            terca: "", 
-            quarta: "", 
-            quinta: { nome: "Carlos", disciplina: "Biologia" }, 
+    // Definindo 4 DataSources
+    const dataSourceVestibular = [
+        {
+            horario: "08:00",
+            segunda: { nome: "Renan Augusto", disciplina: "Matemática" },
+            terca: "",
+            quarta: "",
+            quinta: { nome: "Carlos", disciplina: "Biologia" },
             sexta: ""
         },
 
-        {horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: ""},
+        { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
-        {horario: "09:30", 
-            segunda: "", 
-            terca: "", 
+        {
+            horario: "09:30",
+            segunda: "",
+            terca: "",
             quarta: "",
-            quinta: { nome: "Duddy", disciplina: "Literatura" }, 
+            quinta: { nome: "Duddy", disciplina: "Literatura" },
             sexta: { nome: "Rafael", disciplina: "Filosofia" }
         },
 
-        {horario: "10:45", segunda: "", terca: "", quarta: "", quinta: "", sexta: ""},
+        { horario: "10:45", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
-        {horario: "-----", segunda: "", terca: "", quarta: "", quinta: "", sexta: ""},
+        { horario: "-----", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
-        {horario: "14:00", 
-            segunda: "", 
-            terca: "", 
-            quarta: "", 
-            quinta: { nome: "Ana Luiza", disciplina: "Matemática" }, 
+        {
+            horario: "14:00",
+            segunda: "",
+            terca: "",
+            quarta: "",
+            quinta: { nome: "Ana Luiza", disciplina: "Matemática" },
             sexta: { nome: "Coutinho", disciplina: "História" }
         },
 
-        {horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: ""},
+        { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
-        {horario: "15:30", 
-            segunda: "", 
-            terca: "", 
-            quarta: "", 
-            quinta: { nome: "Renan", disciplina: "Geografia" }, 
+        {
+            horario: "15:30",
+            segunda: "",
+            terca: "",
+            quarta: "",
+            quinta: { nome: "Renan", disciplina: "Geografia" },
             sexta: ""
         },
 
-        {horario: "16:45", 
-            segunda: { nome: "João Guilherme", disciplina: "Física" }, 
-            terca: "", 
-            quarta: "", 
-            quinta: { nome: "Bebel", disciplina: "Química" }, 
+        {
+            horario: "16:45",
+            segunda: { nome: "João Guilherme", disciplina: "Física" },
+            terca: "",
+            quarta: "",
+            quinta: { nome: "Bebel", disciplina: "Química" },
             sexta: { nome: "Mariana", disciplina: "Biologia" }
         },
 
-        {horario: "------", 
-            segunda: "", terca: "", quarta: "", quinta: "", sexta: ""},
+        {
+            horario: "------",
+            segunda: "", terca: "", quarta: "", quinta: "", sexta: ""
+        },
 
-        {horario: "19:00", 
-            segunda: { nome: "João Guilherme", disciplina: "Matemática" }, 
-            terca: "", 
-            quarta: { nome: "Héric", disciplina: "Gramática" }, 
-            quinta: { nome: "Danilo", disciplina: "Biologia" }, 
+        {
+            horario: "19:00",
+            segunda: { nome: "João Guilherme", disciplina: "Matemática" },
+            terca: { nome: "Guga", disciplina: "Química" },
+            quarta: { nome: "Héric", disciplina: "Gramática" },
+            quinta: { nome: "Danilo", disciplina: "Biologia" },
             sexta: { nome: "Jennifer", disciplina: "Redação" }
         },
 
-        {horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: ""},
+        { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
         {
             horario: "20:20",
-            segunda: { nome: "Uriel", disciplina: "História" }, 
-            terca: "", 
-            quarta: { nome: "Arthur", disciplina: "Química" }, 
-            quinta: "", 
+            segunda: { nome: "Uriel", disciplina: "História" },
+            terca: "",
+            quarta: { nome: "Arthur", disciplina: "Química" },
+            quinta: "",
             sexta: { nome: "Jovi", disciplina: "Matemática" }
         },
 
         {
             horario: "21:25",
-            segunda: "", 
-            terca: "", 
-            quarta: { nome: "Luquinhas", disciplina: "Física" }, 
-            quinta: "", 
+            segunda: "",
+            terca: "",
+            quarta: { nome: "Luquinhas", disciplina: "Física" },
+            quinta: "",
             sexta: { nome: "Alessandra", disciplina: "Biologia" }
         }
     ]
+
+    const dataSourceTecnico = [
+        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" }
+    ];
+
+    const dataSourceConcurso = [
+        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" }
+    ];
+
+    const dataSourceTecnicoSabado = [
+        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" }
+    ];
+
+    // Estado para controlar qual DataSource está selecionado
+    const [selectedDataSource, setSelectedDataSource] = useState(dataSourceVestibular);
+
+    // Função para alterar o DataSource ao selecionar no Select
+    const handleChange = (value) => {
+        switch (value) {
+            case "vestibular":
+                setSelectedDataSource(dataSourceVestibular);
+                break;
+            case "tecnico":
+                setSelectedDataSource(dataSourceTecnico);
+                break;
+            case "concurso":
+                setSelectedDataSource(dataSourceConcurso);
+                break;
+            case "tecnicoSabado":
+                setSelectedDataSource(dataSourceTecnicoSabado);
+                break;
+            default:
+                setSelectedDataSource(dataSourceVestibular);
+        }
+    };
 
     return (
         <div className='horarios-container'>
             <div className="table-container">
 
-            <span>Pré-Vestibular</span>
+                <span className='table-filter'>Selecione o horário:</span>
+                <Select defaultValue="vestibular" onChange={handleChange} style={{ width: 200, marginBottom: 20 }}>
+                    <Option value="vestibular">Vestibular</Option>
+                    <Option value="tecnico">Técnico</Option>
+                    <Option value="concurso">Concurso</Option>
+                    <Option value="tecnicoSabado">Técnico Sábado</Option>
+                </Select>
 
-            <Table 
-                columns={columns}
-                dataSource={dataSource}
-                pagination={false}
-                style={{ width: '1200px' }} 
-                rowClassName={() => 'custom-row-height'}
-            />
+                <Table
+                    columns={columns}
+                    dataSource={selectedDataSource}
+                    pagination={false}
+                    scroll={{ x: 'max-content' }} // Ativa a rolagem horizontal
+                    style={{ width: '100%' }} // Garante que a tabela ocupe toda a largura disponível
+                    rowClassName={() => 'custom-row-height'}
+                />
 
             </div>
-
         </div>
-    )
+    );
 }
 
-export default Horarios
+export default Horarios;

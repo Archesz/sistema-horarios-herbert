@@ -13,7 +13,7 @@
     align-items: center;
     padding: 20px 0;
     transition: width 0.3s; // Transição suave para a largura
-    position: fixed;
+    
     &.closed {
         width: 50px; // Largura reduzida quando a sidebar está retraída
     }

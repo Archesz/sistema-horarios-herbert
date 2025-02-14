@@ -5,7 +5,7 @@
     justify-content: flex-start;
     width: 100%;
     padding: 0 20px; /* Reduzir o padding em dispositivos móveis */
-    
+    margin-left: 30px;
     @media (max-width: 768px) { /* Para dispositivos móveis */
         padding: 0 10px; /* Menos padding em telas pequenas */
     }

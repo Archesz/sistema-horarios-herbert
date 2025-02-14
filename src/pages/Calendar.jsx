@@ -5,7 +5,7 @@ function Calendar() {
     return (
         <div className="calendar-container">
             <iframe 
-                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FSao_Paulo&showPrint=0&showTz=0&src=YmEzYWE5ZDAxOGI0MmNjZTcwZDM4OGMzOTBkYjA0NDFlYzEwNDMyNTQzN2YwNWY2Y2I1MGY1ODA0MjFhNDI0OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=cXFhZzE0NmhoYzhqbjFrYnNrZmJkZzE4Y3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23C0CA33&color=%237986CB&color=%23616161" 
+                src="https://calendar.google.com/calendar/embed?src=ba3aa9d018b42cce70d388c390db0441ec104325437f05f6cb50f580421a4249%40group.calendar.google.com&ctz=America%2FSao_Paulo" 
                 className="calendar-iframe" 
             ></iframe>
         </div>

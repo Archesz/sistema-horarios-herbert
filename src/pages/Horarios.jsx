@@ -78,25 +78,32 @@ function Horarios() {
     const dataSourceVestibular = [
         {
             horario: "08:00",
-            segunda: { nome: "Renan Augusto", disciplina: "Matemática" },
+            segunda: { nome: "Renan Augusto", disciplina: "Física" },
             terca: "",
-            quarta: "",
+            quarta: { nome: "Pedro Souza", disciplina: "Matemática" },
             quinta: { nome: "Carlos", disciplina: "Biologia" },
-            sexta: ""
+            sexta: { nome: "Rafael", disciplina: "Filosofia" }
         },
 
         { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
         {
             horario: "09:30",
-            segunda: "",
-            terca: "",
-            quarta: "",
+            segunda: { nome: "Vitória", disciplina: "História" },
+            terca: { nome: "Hugo", disciplina: "Geografia" },
+            quarta: { nome: "Hugo", disciplina: "Geografia" },
             quinta: { nome: "Duddy", disciplina: "Literatura" },
-            sexta: { nome: "Rafael", disciplina: "Filosofia" }
+            sexta: { nome: "Profeta", disciplina: "Física" }
         },
 
-        { horario: "10:45", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
+        { 
+            horario: "10:45", 
+            segunda: "", 
+            terca: "", 
+            quarta: "", 
+            quinta: { nome: "Pedro Souza", disciplina: "Matemática" }, 
+            sexta: { nome: "Mari", disciplina: "História" } 
+        },
 
         { horario: "-----", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
@@ -117,7 +124,7 @@ function Horarios() {
             terca: "",
             quarta: "",
             quinta: { nome: "Renan", disciplina: "Geografia" },
-            sexta: ""
+            sexta: { nome: "Lontra", disciplina: "Matemática" }
         },
 
         {
@@ -148,9 +155,9 @@ function Horarios() {
         {
             horario: "20:20",
             segunda: { nome: "Uriel", disciplina: "História" },
-            terca: "",
+            terca: { nome: "Silas", disciplina: "Socio/Filo" },
             quarta: { nome: "Arthur", disciplina: "Química" },
-            quinta: "",
+            quinta: { nome: "Kaique (?)", disciplina: "Geografia" },
             sexta: { nome: "Jovi", disciplina: "Matemática" }
         },
 
@@ -165,7 +172,60 @@ function Horarios() {
     ]
 
     const dataSourceTecnico = [
-        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" }
+        { 
+            horario: "08:00", 
+            segunda: { nome: "Matheus Pompermayer", disciplina: "Humanidades" }, 
+            terca: "", 
+            quarta: "", 
+            quinta: "", 
+            sexta: "" 
+        },
+
+        { 
+            horario: "09:30", 
+            segunda: { nome: "Caio", disciplina: "Matemática" }, 
+            terca: "", 
+            quarta: "", 
+            quinta: "", 
+            sexta: "" 
+        },
+        
+        { 
+            horario: "10:45", 
+            segunda: { nome: "Caio", disciplina: "Matemática" }, 
+            terca: "", 
+            quarta: { nome: "Pedro Lucas", disciplina: "Física" }, 
+            quinta: "", 
+            sexta: { nome: "Fabi", disciplina: "Biologia" } 
+        },
+
+        { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
+
+        { 
+            horario: "14:00", 
+            segunda: { nome: "Yasmin", disciplina: "Redação" }, 
+            terca: "", 
+            quarta: { nome: "Larissa", disciplina: "Química" }, 
+            quinta: "", 
+            sexta: { nome: "Fabi", disciplina: "Biologia" }
+        },
+
+        { 
+            horario: "15:30", 
+            segunda: { nome: "João Guilherme", disciplina: "Física" }, 
+            terca: "", 
+            quarta: { nome: "Pedro Lucas", disciplina: "Matemática" }, 
+            quinta: "", 
+            sexta: { nome: "Coutinho", disciplina: "Humanidades" } 
+        },
+        {
+            horario: "16:45", 
+            segunda: "", 
+            terca: "", 
+            quarta: { nome: "Pedro Lucas", disciplina: "Matemática" }, 
+            quinta: "", 
+            sexta: "" },
+
     ];
 
     const dataSourceConcurso = [

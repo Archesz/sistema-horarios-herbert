@@ -110,7 +110,7 @@ function Formulario() {
   };
       
   return (
-    <div className="App">
+    <div className="container">
       <form className="agenda-field" onSubmit={handleSubmit}>
 
         <div className="agenda-header">

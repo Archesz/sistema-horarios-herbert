@@ -11,7 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar />
+
+        <Sidebar />      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/horarios" element={<Horarios />} />

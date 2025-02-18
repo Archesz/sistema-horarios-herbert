@@ -1,0 +1,36 @@
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.avatar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px dashed white;
+}
+
+.avatar-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px;
+    width: 120px;
+}
+
+.avatar-menu li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.avatar-menu li:hover {
+    background-color: #f4f4f4;
+}

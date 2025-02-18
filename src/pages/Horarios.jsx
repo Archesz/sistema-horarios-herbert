@@ -16,8 +16,7 @@ function Horarios() {
         "Literatura": "gold",
         "História": "cyan",
         "Geografia": "red",
-        "Sociologia": "yellow",
-        "Filosofia": "pink",
+        "Socio/Filo": "pink",
         "Inglês": "gray"
     };
 
@@ -82,7 +81,7 @@ function Horarios() {
             terca: "",
             quarta: { nome: "Pedro Souza", disciplina: "Matemática" },
             quinta: { nome: "Carlos", disciplina: "Biologia" },
-            sexta: { nome: "Rafael", disciplina: "Filosofia" }
+            sexta: { nome: "Rafael", disciplina: "Socio/Filo" }
         },
 
         { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
@@ -93,23 +92,23 @@ function Horarios() {
             terca: { nome: "Hugo", disciplina: "Geografia" },
             quarta: { nome: "Hugo", disciplina: "Geografia" },
             quinta: { nome: "Duddy", disciplina: "Literatura" },
-            sexta: { nome: "Profeta", disciplina: "Física" }
+            sexta: { nome: "Mari", disciplina: "História" }
         },
 
         { 
             horario: "10:45", 
-            segunda: "", 
+            segunda: { nome: "Yasmin", disciplina: "Redação" }, 
             terca: "", 
-            quarta: "", 
+            quarta: { nome: "Danilo", disciplina: "Biologia" }, 
             quinta: { nome: "Pedro Souza", disciplina: "Matemática" }, 
-            sexta: { nome: "Mari", disciplina: "História" } 
+            sexta: { nome: "Profeta", disciplina: "Física" }
         },
 
         { horario: "-----", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
         {
             horario: "14:00",
-            segunda: "",
+            segunda: { nome: "(A Confirmar)", disciplina: "Gramática" },
             terca: "",
             quarta: "",
             quinta: { nome: "Ana Luiza", disciplina: "Matemática" },
@@ -120,9 +119,9 @@ function Horarios() {
 
         {
             horario: "15:30",
-            segunda: "",
-            terca: "",
-            quarta: "",
+            segunda:  { nome: "Yasmin", disciplina: "Redação" },
+            terca: { nome: "Pedro Lucas", disciplina: "Física" },
+            quarta: { nome: "(A Confirmar)", disciplina: "Geografia" },
             quinta: { nome: "Renan", disciplina: "Geografia" },
             sexta: { nome: "Lontra", disciplina: "Matemática" }
         },
@@ -130,9 +129,9 @@ function Horarios() {
         {
             horario: "16:45",
             segunda: { nome: "João Guilherme", disciplina: "Física" },
-            terca: "",
-            quarta: "",
-            quinta: { nome: "Bebel", disciplina: "Química" },
+            terca: { nome: "Bebel", disciplina: "Química" },
+            quarta: { nome: "Adri", disciplina: "Literatura" },
+            quinta: { nome: "Sol", disciplina: "História" },
             sexta: { nome: "Mariana", disciplina: "Biologia" }
         },
 
@@ -146,7 +145,7 @@ function Horarios() {
             segunda: { nome: "João Guilherme", disciplina: "Matemática" },
             terca: { nome: "Guga", disciplina: "Química" },
             quarta: { nome: "Héric", disciplina: "Gramática" },
-            quinta: { nome: "Danilo", disciplina: "Biologia" },
+            quinta: { nome: "Adri", disciplina: "Literatura" },
             sexta: { nome: "Jennifer", disciplina: "Redação" }
         },
 
@@ -157,7 +156,7 @@ function Horarios() {
             segunda: { nome: "Uriel", disciplina: "História" },
             terca: { nome: "Silas", disciplina: "Socio/Filo" },
             quarta: { nome: "Arthur", disciplina: "Química" },
-            quinta: { nome: "Kaique (?)", disciplina: "Geografia" },
+            quinta: { nome: "Kaique", disciplina: "Geografia" },
             sexta: { nome: "Jovi", disciplina: "Matemática" }
         },
 
@@ -166,7 +165,7 @@ function Horarios() {
             segunda: "",
             terca: "",
             quarta: { nome: "Luquinhas", disciplina: "Física" },
-            quinta: "",
+            quinta: { nome: "Danilo", disciplina: "Biologia" },
             sexta: { nome: "Alessandra", disciplina: "Biologia" }
         }
     ]
@@ -214,7 +213,7 @@ function Horarios() {
             horario: "15:30", 
             segunda: { nome: "João Guilherme", disciplina: "Física" }, 
             terca: "", 
-            quarta: { nome: "Pedro Lucas", disciplina: "Matemática" }, 
+            quarta: "", 
             quinta: "", 
             sexta: { nome: "Coutinho", disciplina: "Humanidades" } 
         },
@@ -222,7 +221,7 @@ function Horarios() {
             horario: "16:45", 
             segunda: "", 
             terca: "", 
-            quarta: { nome: "Pedro Lucas", disciplina: "Matemática" }, 
+            quarta: "", 
             quinta: "", 
             sexta: "" },
 
@@ -260,7 +259,7 @@ function Horarios() {
     };
 
     return (
-        <div className='horarios-container'>
+        <div className='container'>
             <div className="table-container">
 
                 <span className='table-filter'>Selecione o horário:</span>

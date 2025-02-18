@@ -1,5 +1,40 @@
-.home-container{
-    padding: 40px;
+.home-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+.home-welcome{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .welcome-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 110px;
+        justify-content: space-between;
+    }
+}
+
+.home-row{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.home-col{
+    width: 25%;
+    height: 95%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }

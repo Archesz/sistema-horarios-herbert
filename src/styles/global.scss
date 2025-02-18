@@ -10,13 +10,19 @@
     min-height: 100vh;
     width: 100%;
     background: #151515;
-    align-items: center;
-    padding: 30px;
 
     .link {
         font-weight: bold;
         color: rgb(255, 255, 255);
     }
+}
+
+.container{
+    width: 92.5%;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
 }
 
 .red{

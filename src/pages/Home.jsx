@@ -1,16 +1,37 @@
 import React from 'react'
 import "../styles/home.scss"
+import Avatar from '../components/Avatar/Avatar'
+import Notification from "../components/Notification/Notification"
+import Dataview from '../components/Dataview/Dataview'
+import Events from '../components/Events/Events'
+import ListStudents from '../components/ListStudents/ListStudents'
 
 function Home() {
   return (
-    <div className='home-container'>
-      <span className="agenda-title">Sistema</span>
-      <span className='agenda-title red'>Herbert de Souza</span>
-      <span className="agenda-descript">Olá! Esse sistema foi desenvolvido por <a href="https://portfolio-jovi-a8jn76wqx-archesz.vercel.app" target="_blank" className='link'>@Archs (Jovi)</a>. Estamos em fase de teste. Quaisquer erro, me chamem!</span>
+    <div className='container'>
 
-      <span className="agenda-descript">Esse é um projeto <b>Open Source</b> (Código aberto), Quaisquer programadores, designers, artistas ou computeiros podem ajudar a desenvolver o projeto para ampliar para diversos cursinhos populares :)</span>
+      <div className='home-welcome'>
+        <span className="home-title">Olá, bem vindx Professor(a).</span>
 
-      <span className="agenda-descript">Para acessar o código desse projeto, basta acessar o <a href="https://github.com/Archesz/sistema-horarios-herbert" className='link' target="_blank">Github</a>.</span>
+        <div className='welcome-row'>
+          <Notification />
+          <Avatar />
+        </div>
+
+      </div>
+
+      <div className='home-row'>
+
+        <Dataview />
+
+        <div className='home-col'>
+
+            <Events />
+            <ListStudents />
+
+        </div>
+
+      </div>
 
     </div>
   )

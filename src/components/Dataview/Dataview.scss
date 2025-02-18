@@ -1,0 +1,72 @@
+.dataview-container {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 75%;
+    border: 1px solid #4a4a4a;
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    box-shadow: 4px 4px 6px black;
+}
+
+.chat-window {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #212121;
+    border-bottom: 1px solid #ccc;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #e1ffc7;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.gemini {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #af4e4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a04545;
+}
+
+.chat-aviso{
+    font-size: 36px;
+    color: #e64f4c;
+}

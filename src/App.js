@@ -4,9 +4,11 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Horarios from './pages/Horarios';
 import Formulario from './pages/Formulario';
 import Calendar from './pages/Calendar';
-import './styles/global.scss';
 import Home from './pages/Home';
 import Plantao from './pages/Plantao';
+import Alunos from "./pages/Alunos";
+
+import './styles/global.scss';
 
 function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = React.useState(false);
@@ -29,6 +31,7 @@ function App() {
             <Route path="/formulario" element={<Formulario />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/plantao" element={<Plantao />} />
+            <Route path="/alunos" element={<Alunos />} />
           </Routes>
         </div>
       </div>

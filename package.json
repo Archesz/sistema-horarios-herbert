@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@google/generative-ai": "^0.22.0",
     "antd": "^5.24.0",
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
@@ -12,6 +13,7 @@
     "motion": "^12.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-markdown": "^10.0.0",
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
     "recharts": "^2.15.1",

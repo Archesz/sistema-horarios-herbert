@@ -6,19 +6,31 @@ import Formulario from './pages/Formulario';
 import Calendar from './pages/Calendar';
 import './styles/global.scss';
 import Home from './pages/Home';
+import Plantao from './pages/Plantao';
 
 function App() {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = React.useState(false);
+
   return (
     <Router>
       <div className="App">
+        <Sidebar onCollapse={setIsSidebarCollapsed} />
 
-        <Sidebar />      
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/horarios" element={<Horarios />} />
-          <Route path="/formulario" element={<Formulario />} />
-          <Route path="/calendar" element={<Calendar />} />
-        </Routes>
+        <div
+          className="main-content"
+          style={{
+            marginLeft: isSidebarCollapsed ? '60px' : '260px', // Ajuste conforme a largura do Sidebar
+            transition: 'margin-left 0.3s ease-in-out', // Adiciona transição suave
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/horarios" element={<Horarios />} />
+            <Route path="/formulario" element={<Formulario />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/plantao" element={<Plantao />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

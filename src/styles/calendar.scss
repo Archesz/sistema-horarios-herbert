@@ -10,10 +10,10 @@
 
 .calendar-iframe {
     border: solid 1px #777;
-    width: 80%;
     height: 680px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    width: 100%;
     background-color: black;
     
     &:hover {

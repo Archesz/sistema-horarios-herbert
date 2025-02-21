@@ -9,16 +9,8 @@ import ListStudents from '../components/ListStudents/ListStudents'
 function Home() {
   return (
     <div className='container'>
-
-      <div className='home-welcome'>
-        <span className="home-title">Olá, bem vindx Professor(a).</span>
-
-        <div className='welcome-row'>
-          <Notification />
-          <Avatar />
-        </div>
-
-      </div>
+      
+      <span className='container-welcome'>Olá, Prof</span>
 
       <div className='home-row'>
 

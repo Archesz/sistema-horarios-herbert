@@ -17,7 +17,8 @@ function Horarios() {
         "História": "cyan",
         "Geografia": "red",
         "Socio/Filo": "pink",
-        "Inglês": "gray"
+        "Inglês": "gray",
+        "Linguagens": "#56CBF9"
     };
 
     const columns = [
@@ -73,6 +74,32 @@ function Horarios() {
         },
     ];
 
+    const columnsSab = [
+        {
+            title: "Horário", dataIndex: "horario", key: "horário",
+            render: (text) => <a className='horario'>{text}</a>,
+            align: "center"
+        },
+        {
+            title: "Sábado A", dataIndex: "sabadoA", key: "sabado",
+            render: (item) => item && (
+                <Tag color={disciplinaCores[item.disciplina]}>
+                    {item.nome}<br />{item.disciplina}
+                </Tag>
+            ),
+            align: "center"
+        },
+        {
+            title: "Sábado B", dataIndex: "sabadoB", key: "sabado",
+            render: (item) => item && (
+                <Tag color={disciplinaCores[item.disciplina]}>
+                    {item.nome}<br />{item.disciplina}
+                </Tag>
+            ),
+            align: "center"
+        },
+    ]
+
     // Definindo 4 DataSources
     const dataSourceVestibular = [
         {
@@ -95,12 +122,12 @@ function Horarios() {
             sexta: { nome: "Mari", disciplina: "História" }
         },
 
-        { 
-            horario: "10:45", 
-            segunda: { nome: "Yasmin", disciplina: "Redação" }, 
-            terca: "", 
-            quarta: { nome: "Danilo", disciplina: "Biologia" }, 
-            quinta: { nome: "Pedro Souza", disciplina: "Matemática" }, 
+        {
+            horario: "10:45",
+            segunda: { nome: "Yasmin", disciplina: "Redação" },
+            terca: "",
+            quarta: { nome: "Danilo", disciplina: "Biologia" },
+            quinta: { nome: "Pedro Souza", disciplina: "Matemática" },
             sexta: { nome: "Profeta", disciplina: "Física" }
         },
 
@@ -108,7 +135,7 @@ function Horarios() {
 
         {
             horario: "14:00",
-            segunda: { nome: "(A Confirmar)", disciplina: "Gramática" },
+            segunda: { nome: "Sol", disciplina: "História" },
             terca: "",
             quarta: "",
             quinta: { nome: "Ana Luiza", disciplina: "Matemática" },
@@ -119,10 +146,10 @@ function Horarios() {
 
         {
             horario: "15:30",
-            segunda:  { nome: "Yasmin", disciplina: "Redação" },
+            segunda: { nome: "Yasmin", disciplina: "Redação" },
             terca: { nome: "Pedro Lucas", disciplina: "Física" },
-            quarta: { nome: "(A Confirmar)", disciplina: "Geografia" },
-            quinta: { nome: "Renan", disciplina: "Geografia" },
+            quarta: { nome: "Kaique", disciplina: "Geografia" },
+            quinta: { nome: "Alice", disciplina: "Sociologia" },
             sexta: { nome: "Lontra", disciplina: "Matemática" }
         },
 
@@ -130,8 +157,8 @@ function Horarios() {
             horario: "16:45",
             segunda: { nome: "João Guilherme", disciplina: "Física" },
             terca: { nome: "Bebel", disciplina: "Química" },
-            quarta: { nome: "Adri", disciplina: "Literatura" },
-            quinta: { nome: "Sol", disciplina: "História" },
+            quarta: { nome: "Adri", disciplina: "Linguagens" },
+            quinta: { nome: "Renan", disciplina: "Geografia" },
             sexta: { nome: "Mariana", disciplina: "Biologia" }
         },
 
@@ -144,8 +171,8 @@ function Horarios() {
             horario: "19:00",
             segunda: { nome: "João Guilherme", disciplina: "Matemática" },
             terca: { nome: "Guga", disciplina: "Química" },
-            quarta: { nome: "Héric", disciplina: "Gramática" },
-            quinta: { nome: "Adri", disciplina: "Literatura" },
+            quarta: { nome: "Adri/Héric", disciplina: "Linguagens" },
+            quinta: { nome: "Guilherme", disciplina: "Física" },
             sexta: { nome: "Jennifer", disciplina: "Redação" }
         },
 
@@ -171,59 +198,60 @@ function Horarios() {
     ]
 
     const dataSourceTecnico = [
-        { 
-            horario: "08:00", 
-            segunda: { nome: "Matheus Pompermayer", disciplina: "Humanidades" }, 
-            terca: "", 
-            quarta: "", 
-            quinta: "", 
-            sexta: "" 
+        {
+            horario: "08:00",
+            segunda: { nome: "Matheus Pompermayer", disciplina: "Humanidades" },
+            terca: "",
+            quarta: "",
+            quinta: "",
+            sexta: ""
         },
 
-        { 
-            horario: "09:30", 
-            segunda: { nome: "Caio", disciplina: "Matemática" }, 
-            terca: "", 
-            quarta: "", 
-            quinta: "", 
-            sexta: "" 
+        {
+            horario: "09:30",
+            segunda: { nome: "Caio", disciplina: "Matemática" },
+            terca: "",
+            quarta: { nome: "Larissa", disciplina: "Química" },
+            quinta: "",
+            sexta: ""
         },
-        
-        { 
-            horario: "10:45", 
-            segunda: { nome: "Caio", disciplina: "Matemática" }, 
-            terca: "", 
-            quarta: { nome: "Pedro Lucas", disciplina: "Física" }, 
-            quinta: "", 
-            sexta: { nome: "Fabi", disciplina: "Biologia" } 
+
+        {
+            horario: "10:45",
+            segunda: { nome: "Caio", disciplina: "Matemática" },
+            terca: "",
+            quarta: { nome: "Pedro Lucas", disciplina: "Física" },
+            quinta: "",
+            sexta: { nome: "Fabi", disciplina: "Biologia" }
         },
 
         { horario: "Intervalo", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
 
-        { 
-            horario: "14:00", 
-            segunda: { nome: "Yasmin", disciplina: "Redação" }, 
-            terca: "", 
-            quarta: { nome: "Larissa", disciplina: "Química" }, 
-            quinta: "", 
+        {
+            horario: "14:00",
+            segunda: { nome: "Yasmin", disciplina: "Redação" },
+            terca: "",
+            quarta: { nome: "Pedro Lucas", disciplina: "Matemática" },
+            quinta: "",
             sexta: { nome: "Fabi", disciplina: "Biologia" }
         },
 
-        { 
-            horario: "15:30", 
-            segunda: { nome: "João Guilherme", disciplina: "Física" }, 
-            terca: "", 
-            quarta: "", 
-            quinta: "", 
-            sexta: { nome: "Coutinho", disciplina: "Humanidades" } 
+        {
+            horario: "15:30",
+            segunda: { nome: "João Guilherme", disciplina: "Física" },
+            terca: "",
+            quarta: { nome: "Larissa", disciplina: "Química" },
+            quinta: "",
+            sexta: { nome: "Coutinho", disciplina: "Humanidades" }
         },
         {
-            horario: "16:45", 
-            segunda: "", 
-            terca: "", 
-            quarta: "", 
-            quinta: "", 
-            sexta: "" },
+            horario: "16:45",
+            segunda: { nome: "Pedro Lucas", disciplina: "Matemática" },
+            terca: "",
+            quarta: "",
+            quinta: "",
+            sexta: ""
+        },
 
     ];
 
@@ -232,31 +260,67 @@ function Horarios() {
     ];
 
     const dataSourceTecnicoSabado = [
-        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" }
+        {
+            horario: "08:00",
+            sabadoA: {nome: "Windson", disciplina: "Linguagens"},
+            sabadoB: {nome: "Windson", disciplina: "Linguagens"}
+        },
+        { 
+            horario: "08:50", 
+            sabadoA: {nome: "Pedro Lucas", disciplina: "Matemática"}, 
+            sabadoB: {nome: "Pedro Lucas", disciplina: "Matemática"} 
+        },
+        { 
+            horario: "09:40", 
+            sabadoA: {nome: "", disciplina: "Redação"}, 
+            sabadoB: {nome: "", disciplina: "Redação"} 
+        },
+        { 
+            horario: "Intervalo", 
+            sabadoA: {nome: "", disciplina: ""}, 
+            sabadoB: {nome: "", disciplina: ""} 
+        },
+        { 
+            horario: "10:50",
+            sabadoA: {nome: "", disciplina: "Química"}, 
+            sabadoB: {nome: "João Guilherme", disciplina: "Física"} 
+        },
+        { 
+            horario: "11:40", 
+            sabadoA: {nome: "", disciplina: "Biologia"}, 
+            sabadoB: {nome: "", disciplina: "Humanidades"} 
+        }
     ];
 
     // Estado para controlar qual DataSource está selecionado
     const [selectedDataSource, setSelectedDataSource] = useState(dataSourceVestibular);
+    const [selectedColumn, setSelectedColum] = useState(columns)
 
     // Função para alterar o DataSource ao selecionar no Select
     const handleChange = (value) => {
         switch (value) {
             case "vestibular":
                 setSelectedDataSource(dataSourceVestibular);
+                setSelectedColum(columns);
                 break;
             case "tecnico":
                 setSelectedDataSource(dataSourceTecnico);
+                setSelectedColum(columns);
                 break;
             case "concurso":
                 setSelectedDataSource(dataSourceConcurso);
+                setSelectedColum(columns);
                 break;
             case "tecnicoSabado":
                 setSelectedDataSource(dataSourceTecnicoSabado);
+                setSelectedColum(columnsSab)
                 break;
             default:
                 setSelectedDataSource(dataSourceVestibular);
+                setSelectedColum(columns);
         }
     };
+
 
     return (
         <div className='container'>
@@ -271,7 +335,7 @@ function Horarios() {
                 </Select>
 
                 <Table
-                    columns={columns}
+                    columns={selectedColumn}
                     dataSource={selectedDataSource}
                     pagination={false}
                     scroll={{ x: 'max-content' }} // Ativa a rolagem horizontal

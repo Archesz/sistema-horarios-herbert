@@ -1,40 +1,72 @@
-.home-title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 36px;
-}
+.container {
+    padding: 30px;
+    padding-top: 80px; // Adiciona um padding-top para compensar a altura do menu superior
 
-.home-welcome{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    .welcome-row{
+    @media (max-width: 768px) {
+        padding: 15px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 110px;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 90px; // Ajuste para dispositivos móveis, se necessário
     }
 }
 
-.home-row{
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    gap: 20px;
-    margin-top: 32px;
+.container-welcome{
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+
+    @media (min-width: 1024px) {
+        margin-bottom: 60px;
+    }
 }
 
-.home-col{
+.home-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column; // Altera a direção para coluna em dispositivos móveis
+        gap: 10px; // Adiciona espaçamento entre os elementos
+    }
+}
+
+.home-title {
+    font-size: 36px;
+
+    @media (max-width: 768px) {
+        font-size: 24px; // Reduz o tamanho da fonte em dispositivos móveis
+    }
+}
+
+.home-row {
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column; // Altera a direção para coluna em dispositivos móveis
+        gap: 10px; // Reduz o espaçamento entre os elementos
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 20px;
+    }
+}
+
+.home-col {
     width: 25%;
-    height: 95%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
+    @media (max-width: 768px) {
+        width: 100%; // Ocupa 100% da largura em dispositivos móveis
+        gap: 20px;
+        margin-top: 12px;
+    }
+
+    @media (min-width: 768px) {
+        gap: 20px;
+    }
 }

@@ -17,14 +17,27 @@
     }
 }
 
-.container{
-    width: 92.5%;
-    margin-left: 80px;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-}
+.container {
+    padding: 10px; // Reduz o padding geral
+    padding-top: 60px; // Ajusta o padding-top para compensar o menu superior
 
+    @media (max-width: 768px) {
+        padding: 50px; // Reduz ainda mais o padding em dispositivos móveis
+        padding-top: 50px; // Ajuste para dispositivos móveis
+    }
+}
 .red{
     color: red;
 }
+
+.main-content {
+    transition: margin-left 0.3s ease-in-out;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
+

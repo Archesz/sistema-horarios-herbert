@@ -6,7 +6,6 @@ function Dataview() {
     const [messages, setMessages] = useState([]);
     const [userInput, setUserInput] = useState("");
 
-    // Função para enviar mensagens para o Gemini
     const sendMessage = async (message) => {
         try {
             const response = await axios.post('URL_DA_API_DO_GEMINI', {
@@ -16,14 +15,12 @@ function Dataview() {
                 },
                 data: {
                     prompt: message,
-                    // Qualquer parâmetro adicional dependendo da API do Gemini
                 }
             });
-            // Adiciona a resposta ao estado de mensagens
             setMessages((prevMessages) => [
                 ...prevMessages,
                 { sender: 'user', text: message },
-                { sender: 'gemini', text: response.data.answer }, // ajustado conforme resposta da API
+                { sender: 'gemini', text: response.data.answer },
             ]);
         } catch (error) {
             console.error("Erro ao se comunicar com o Gemini:", error);

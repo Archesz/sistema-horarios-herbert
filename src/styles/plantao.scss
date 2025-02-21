@@ -1,0 +1,108 @@
+.plantao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @media (max-width: 768px) {
+        margin-top: 60px;
+    }
+
+}
+
+.plantao-form {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #ffffff;
+    }
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.input-field-plantao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+        font-size: 0.9rem;
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 0.9rem;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #357abd;
+    }
+}
+
+@media (max-width: 768px) {
+    .plantao-container {
+        padding: 1rem;
+    }
+
+    .plantao-form {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}

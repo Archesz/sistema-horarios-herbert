@@ -38,11 +38,15 @@ function ListStudents() {
 
     return (
         <div className='listStudents-container'>
+
+            <span className='listStudents-title'>Alunos Herbertianxs</span>
+
             <div className='filter-container'>
                 <Input 
                     placeholder='Buscar por nome...' 
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    className='teste'
                 />
                 <Select 
                     defaultValue="" 

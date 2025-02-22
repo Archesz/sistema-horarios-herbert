@@ -272,8 +272,8 @@ function Horarios() {
         },
         { 
             horario: "09:40", 
-            sabadoA: {nome: "", disciplina: "Redação"}, 
-            sabadoB: {nome: "", disciplina: "Redação"} 
+            sabadoA: {nome: "Yasmin", disciplina: "Redação"}, 
+            sabadoB: {nome: "Yasmin", disciplina: "Redação"} 
         },
         { 
             horario: "Intervalo", 

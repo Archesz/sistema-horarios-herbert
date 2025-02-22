@@ -150,7 +150,7 @@ function Alunos() {
                 dataSource={filtrarDados()}
                 pagination={false}
                 scroll={{ x: 'max-content' }}
-                style={{ width: '100%', marginTop: '20px' }}
+                style={{ width: '100%', marginTop: '20px', cursor: 'pointer' }}
                 rowClassName={() => 'custom-row-height'}
                 onRow={(record) => ({
                     onClick: () => abrirModal(record),

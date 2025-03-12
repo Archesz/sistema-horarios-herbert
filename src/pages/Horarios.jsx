@@ -105,7 +105,7 @@ function Horarios() {
         {
             horario: "08:00",
             segunda: { nome: "Renan Augusto", disciplina: "Física" },
-            terca: "",
+            terca: { nome: "Barbara", disciplina: "Química" },
             quarta: { nome: "Pedro Souza", disciplina: "Matemática" },
             quinta: { nome: "Carlos", disciplina: "Biologia" },
             sexta: { nome: "Rafael", disciplina: "Socio/Filo" }
@@ -125,7 +125,7 @@ function Horarios() {
         {
             horario: "10:45",
             segunda: { nome: "Yasmin", disciplina: "Redação" },
-            terca: "",
+            terca: { nome: "Marcelo", disciplina: "Química" },
             quarta: { nome: "Danilo", disciplina: "Biologia" },
             quinta: { nome: "Pedro Souza", disciplina: "Matemática" },
             sexta: { nome: "Profeta", disciplina: "Física" }
@@ -136,8 +136,8 @@ function Horarios() {
         {
             horario: "14:00",
             segunda: { nome: "Sol", disciplina: "História" },
-            terca: "",
-            quarta: "",
+            terca: { nome: "Marcelo", disciplina: "Química" },
+            quarta: { nome: "Pedro Lucas", disciplina: "Física" },
             quinta: { nome: "Ana Luiza", disciplina: "Matemática" },
             sexta: { nome: "Coutinho", disciplina: "História" }
         },
@@ -147,8 +147,8 @@ function Horarios() {
         {
             horario: "15:30",
             segunda: { nome: "Yasmin", disciplina: "Redação" },
-            terca: { nome: "Pedro Lucas", disciplina: "Física" },
-            quarta: { nome: "Kaique", disciplina: "Geografia" },
+            terca: { nome: "-", disciplina: "Biologia" },
+            quarta: { nome: "Hugo", disciplina: "Geografia" },
             quinta: { nome: "Alice", disciplina: "Sociologia" },
             sexta: { nome: "Lontra", disciplina: "Matemática" }
         },
@@ -181,7 +181,7 @@ function Horarios() {
         {
             horario: "20:20",
             segunda: { nome: "Uriel", disciplina: "História" },
-            terca: { nome: "Silas", disciplina: "Socio/Filo" },
+            terca: { nome: "Silas/Soph", disciplina: "Socio/Filo" },
             quarta: { nome: "Arthur", disciplina: "Química" },
             quinta: { nome: "Kaique", disciplina: "Geografia" },
             sexta: { nome: "Jovi", disciplina: "Matemática" }
@@ -189,8 +189,8 @@ function Horarios() {
 
         {
             horario: "21:25",
-            segunda: "",
-            terca: "",
+            segunda: { nome: "-", disciplina: "Geografia" },
+            terca: { nome: "Lucas", disciplina: "História" },
             quarta: { nome: "Luquinhas", disciplina: "Física" },
             quinta: { nome: "Danilo", disciplina: "Biologia" },
             sexta: { nome: "Alessandra", disciplina: "Biologia" }
@@ -202,7 +202,7 @@ function Horarios() {
             horario: "08:00",
             segunda: { nome: "Matheus Pompermayer", disciplina: "Humanidades" },
             terca: "",
-            quarta: "",
+            quarta: {nome: "Yasmin", disciplina: "Redação"},
             quinta: "",
             sexta: ""
         },
@@ -211,7 +211,7 @@ function Horarios() {
             horario: "09:30",
             segunda: { nome: "Caio", disciplina: "Matemática" },
             terca: "",
-            quarta: { nome: "Larissa", disciplina: "Química" },
+            quarta: { nome: "Barbara", disciplina: "Química" },
             quinta: "",
             sexta: ""
         },
@@ -250,12 +250,14 @@ function Horarios() {
             terca: "",
             quarta: "",
             quinta: "",
-            sexta: ""
+            sexta: {nome: "Adriely", disciplina: "Gramática"}
         },
 
     ];
 
     const dataSourceConcurso = [
+        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
+        { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" },
         { horario: "08:00", segunda: "", terca: "", quarta: "", quinta: "", sexta: "" }
     ];
 

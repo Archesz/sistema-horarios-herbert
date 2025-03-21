@@ -231,7 +231,7 @@ function Horarios() {
             horario: "14:00",
             segunda: { nome: "Yasmin", disciplina: "Redação" },
             terca: "",
-            quarta: { nome: "Pedro Lucas", disciplina: "Matemática" },
+            quarta: { nome: "Gabriel", disciplina: "Matemática" },
             quinta: "",
             sexta: { nome: "Fabi", disciplina: "Biologia" }
         },
@@ -246,9 +246,9 @@ function Horarios() {
         },
         {
             horario: "16:45",
-            segunda: { nome: "Pedro Lucas", disciplina: "Matemática" },
+            segunda: { nome: "Gabriel", disciplina: "Matemática" },
             terca: "",
-            quarta: "",
+            quarta: { nome: "Adriely", disciplina: "Gramática"},
             quinta: "",
             sexta: {nome: "Adriely", disciplina: "Gramática"}
         },
@@ -289,7 +289,7 @@ function Horarios() {
         },
         { 
             horario: "11:40", 
-            sabadoA: {nome: "", disciplina: "Biologia"}, 
+            sabadoA: {nome: "Mariana", disciplina: "Biologia"}, 
             sabadoB: {nome: "", disciplina: "Humanidades"} 
         }
     ];
